@@ -1,11 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const dns = require("dns");
 
 dotenv.config();
-
-// Use Google's DNS servers for DNS lookups
-dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 const db_URL = process.env.MONGO_URI;
 
