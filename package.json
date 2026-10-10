@@ -1,0 +1,25 @@
+{
+  "name": "shopnest-full-stack",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "sonu",
+    "service"
+  ],
+  "license": "ISC",
+  "author": "sonu",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+  "setup:apps": "npm ci --prefix backend && npm ci --prefix frontend/my-app",
+  "dev:server": "npm --prefix backend run dev",
+  "dev:client": "npm --prefix frontend/my-app start",
+  "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+  "build": "npm --prefix frontend/my-app run build",
+  "start": "npm --prefix backend start"
+},
+  "dependencies": {
+    "concurrently": "^10.0.5",
+    "react-router-dom": "^6.30.6"
+  }
+}

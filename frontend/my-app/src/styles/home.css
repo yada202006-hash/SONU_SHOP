@@ -1,0 +1,143 @@
+/* ================================
+   GLOBAL PAGE
+================================ */
+
+.home-container {
+  min-height: calc(100vh - 72px);
+
+  background: #000000;
+  color: #ffffff;
+
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero-banner {
+  margin: 0 4px;
+
+  min-height: 230px;
+
+  border-radius: 0 0 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 85, 0, 0.16),
+      transparent 45%
+    ),
+    linear-gradient(
+      100deg,
+      #08080a 0%,
+      #050505 50%,
+      #170900 100%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.04);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 0 60px rgba(255, 70, 0, 0.03);
+}
+
+/* Hero heading */
+
+.hero-banner h1 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+/* Hero paragraph */
+
+.hero-banner p {
+  margin: 0;
+
+  color: #bdbdbd;
+
+  font-size: 16px;
+}
+
+/* ================================
+   FEATURED PRODUCTS
+================================ */
+
+.home-container > h2 {
+  margin: 48px 0 30px;
+  padding: 0 0;
+
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+/* ================================
+   PRODUCT GRID
+================================ */
+
+.product-grid {
+  padding: 0 40px;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+
+  gap: 24px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================================
+   LOADING
+================================ */
+
+.home-container > div:not(.hero-banner):not(.product-grid) {
+  color: #aaa;
+  padding: 40px;
+  text-align: center;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 200px;
+  }
+
+  .hero-banner h1 {
+    font-size: 38px;
+  }
+
+  .home-container > h2 {
+    padding: 0 20px;
+    font-size: 28px;
+  }
+
+  .product-grid {
+    padding: 0 20px;
+  }
+}
